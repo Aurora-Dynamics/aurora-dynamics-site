@@ -175,7 +175,7 @@ body::before {
 .footer { background: var(--deep-charcoal); color: rgba(240,237,232,0.6); padding: 3.5rem 0 2rem; }
 .footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
 @media (max-width: 768px) { .footer__inner { grid-template-columns: 1fr; gap: 2rem; } }
-.footer__brand img { height: 40px; margin-bottom: 1rem; }
+.footer__brand img { height: 80px; margin-bottom: 1rem; }
 .footer__brand p { color: rgba(240,237,232,0.45); font-size: 0.95rem; max-width: 320px; }
 .footer h4 { color: var(--off-white); font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem; }
 .footer__links { list-style: none; }
