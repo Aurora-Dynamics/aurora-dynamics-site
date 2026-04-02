@@ -71,15 +71,16 @@ body::before {
 .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1.1rem 0; transition: background 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), padding 0.4s var(--ease-out); }
 .nav.scrolled { background: rgba(247,245,242,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--soft-grey); padding: 0.6rem 0; }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; max-width: var(--content-width); margin: 0 auto; padding: 0 1.5rem; }
-.nav__logo img { height: 46px; width: auto; transition: height 0.4s var(--ease-out); }
-.nav.scrolled .nav__logo img { height: 36px; }
+.nav__logo img { height: 64px; width: auto; transition: height 0.4s var(--ease-out); }
+.nav.scrolled .nav__logo img { height: 48px; }
 .nav__links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
 .nav__links a { font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; color: var(--deep-charcoal); position: relative; padding-bottom: 2px; }
 .nav__links a:not(.btn)::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--aurora-blue); transition: width 0.3s var(--ease-out); }
 .nav__links a:not(.btn):hover::after, .nav__links a:not(.btn).active::after { width: 100%; }
 .nav__links a:not(.btn):hover { color: var(--aurora-blue); }
 .nav__links a:not(.btn).active { color: var(--aurora-blue); }
-.nav__links a.btn { padding-bottom: 0; }
+.nav__links a.btn { padding-bottom: 0; color: #fff; }
+.nav__links a.btn:hover { color: #fff; }
 
 .nav__toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
 .nav__toggle span { display: block; width: 24px; height: 2px; background: var(--deep-charcoal); margin: 5px 0; transition: all 0.3s var(--ease-out); }
