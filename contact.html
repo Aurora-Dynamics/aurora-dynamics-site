@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Aurora Dynamics</title>
+  <meta name="description" content="Get in touch with Aurora Dynamics. Let's talk about how your sales and marketing teams can start building together.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600;1,9..144,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+    .contact-info__item { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.75rem; }
+    .contact-info__icon { width: 44px; height: 44px; min-width: 44px; border-radius: 10px; background: rgba(92,107,175,0.1); color: var(--aurora-blue); display: flex; align-items: center; justify-content: center; }
+    .contact-info__item h4 { margin-bottom: 0.25rem; }
+    .contact-info__item p { font-size: 1rem; margin-bottom: 0; }
+    .contact-form-card { background: var(--off-white); border: 1px solid var(--soft-grey); border-radius: 16px; padding: 2.5rem; }
+    .next-steps { margin-top: 2.5rem; padding: 1.5rem; background: rgba(92,107,175,0.05); border-radius: 12px; border-left: 3px solid var(--aurora-blue); }
+    .next-steps h4 { margin-bottom: 0.75rem; }
+    .next-steps p { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .next-steps p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="mobile-overlay"></div>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/images/Aurora_Dynamics_1.png" alt="Aurora Dynamics"></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="btn btn--primary">Get in touch</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="hero__content" style="max-width: 640px;">
+        <span class="label">Contact</span>
+        <h1>Let's talk about <em>your pipeline</em></h1>
+        <p>Whether you're exploring ideas or ready to start a project, I'd like to hear from you. Tell me a bit about your situation and I'll get back to you within a working day.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section--alt" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="contact-layout fade-up">
+        <div>
+          <h2 class="mb-4">How to reach me</h2>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="/cdn-cgi/l/email-protection#c1a3a4af81a0b4b3aeb3a0a5b8afa0aca8a2b2efa2aeac"><span class="__cf_email__" data-cfemail="0d6f68634d6c787f627f6c6974636c60646e7e236e6260">[email&#160;protected]</span></a></p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="#" target="_blank">Connect with me on LinkedIn</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info__item">
+            <div class="contact-info__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div>
+              <h4>Based in</h4>
+              <p>Sweden — working with biotech companies across Europe and North America</p>
+            </div>
+          </div>
+
+          <div class="next-steps">
+            <h4>What happens next?</h4>
+            <p>1. You send me a message with some context about your company and situation.</p>
+            <p>2. I'll reply within one working day with my initial thoughts.</p>
+            <p>3. If it looks like there's a fit, we'll schedule a call to dig deeper.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company name">
+            </div>
+            <div class="form-group">
+              <label for="role">Your role</label>
+              <input type="text" id="role" name="role" placeholder="e.g. CCO, VP Commercial, Marketing Lead">
+            </div>
+            <div class="form-group">
+              <label for="message">Tell me about your situation</label>
+              <textarea id="message" name="message" placeholder="What's going on with your sales and marketing teams? What are you looking to improve? No need to be formal — just give me some context." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">Send message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="optin fade-up">
+        <h2>Not ready to reach out?</h2>
+        <p>Practical insights on closing the gap between sales and marketing in life science — delivered to your inbox.</p>
+        <form class="optin__form" action="#" method="POST">
+          <input type="email" name="email" placeholder="Your work email" required>
+          <button type="submit" class="btn btn--amber">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/Aurora_Dynamics_1_dark_transp.png" alt="Aurora Dynamics">
+          <p>Helping life science companies close the gap between sales and marketing — through shared projects that build pipeline.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer__links">
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">The Life Science Lead Gap on Substack</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Aurora Dynamics. All right
