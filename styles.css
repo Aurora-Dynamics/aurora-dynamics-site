@@ -115,7 +115,7 @@ body::before {
 .hero__content h1 { margin-bottom: 1.5rem; }
 .hero__content p { font-size: 1.2rem; margin-bottom: 2.25rem; }
 .hero__actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
-.hero__illustration { position: absolute; right: -5%; top: 55%; transform: translateY(-50%); width: 42%; max-width: 500px; opacity: 0.8; pointer-events: none; }
+.hero__illustration { position: absolute; right: 3%; top: 55%; transform: translateY(-50%); width: 38%; max-width: 480px; opacity: 0.8; pointer-events: none; }
 @media (max-width: 900px) { .hero__illustration { display: none; } }
 
 /* ── SECTIONS ── */
