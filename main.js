@@ -20,11 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('.mobile-overlay');
 
   if (toggle && mobileLinks) {
+    toggle.setAttribute('aria-expanded', 'false');
+
     toggle.addEventListener('click', () => {
       toggle.classList.toggle('open');
       mobileLinks.classList.toggle('open');
       if (overlay) overlay.classList.toggle('open');
-      document.body.style.overflow = mobileLinks.classList.contains('open') ? 'hidden' : '';
+      const isOpen = mobileLinks.classList.contains('open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
     if (overlay) {
@@ -33,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileLinks.classList.remove('open');
         overlay.classList.remove('open');
         document.body.style.overflow = '';
+        toggle.setAttribute('aria-expanded', 'false');
       });
     }
 
@@ -43,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileLinks.classList.remove('open');
         if (overlay) overlay.classList.remove('open');
         document.body.style.overflow = '';
+        toggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -111,12 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── Smooth scroll for anchor links ── */
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
       }
     });
   });
