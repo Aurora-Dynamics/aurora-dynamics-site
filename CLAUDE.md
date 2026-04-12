@@ -10,9 +10,21 @@ This is the website for **Aurora Dynamics**, an internet marketing consultancy f
 **Business:** Helping biotech companies close the gap between sales and marketing through shared projects.
 **Target audience:** CCOs and commercial leads at mid-size biotech companies.
 
+## Reference Documents
+
+Three source-of-truth documents live in `docs/`. Read the relevant one before making any copy or design decisions.
+
+| Document | File | When to use |
+|---|---|---|
+| Brand reference | `docs/aurora-dynamics-brand.md` | Any visual or tone decision — colors, typography, layout, voice dos/don'ts |
+| Business context | `docs/aurora-dynamics-business-context.md` | Checking copy is strategically aligned — right problem, right audience, right product framing |
+| Voice profile | `docs/aurora-dynamics-voice.md` | Writing or editing any copy — sentence rhythm, what to avoid, how Ben actually sounds |
+
+**Always read `docs/aurora-dynamics-voice.md` before editing copy.** It contains specific, nuanced guidance that overrides generic brand voice rules — including things to actively avoid (em dashes, "it's not X, it's Y" constructions, hyperbole, vagueness).
+
 ## Brand & Design Direction
 
-The full brand reference is in `docs/aurora-dynamics-brand.md`. Key points:
+Full detail in `docs/aurora-dynamics-brand.md`. Key points:
 
 - **Design direction:** Editorial & Warm — like a quality publication, not a tech startup
 - **Typography:** Fraunces (serif) for headings, DM Sans (sans-serif) for body. Both loaded from Google Fonts.
@@ -39,8 +51,9 @@ aurora-dynamics-site/
 │       ├── B006_TB.png                        # Illustration 1
 │       └── B025_TB.png                        # Illustration 2
 └── docs/
-    ├── aurora-dynamics-brand.md               # Brand reference
-    └── aurora-dynamics-business-context.md    # Business context
+    ├── aurora-dynamics-brand.md               # Brand reference (visuals, tone, colors, typography)
+    ├── aurora-dynamics-business-context.md    # Business context (strategy, products, ICP)
+    └── aurora-dynamics-voice.md               # Voice profile (how Ben writes — use for all copy)
 ```
 
 ## Before Launch Checklist
@@ -62,10 +75,35 @@ These items need to be completed before the site goes live:
 - [ ] Add Vercel Web Analytics (`@vercel/analytics` package — free tier)
 - [ ] Add client testimonials to the social proof section on the home page
 - [ ] Add client logos to the social proof section
-- [ ] Add a blog section when ready
+- [ ] Add a blog section when ready (see approach below)
 - [ ] Add a favicon (can extract from the logo triangle mark)
 - [ ] Add Open Graph meta tags for social sharing
 - [ ] Add a privacy policy page (linked from footer)
+
+## Blog — Planned Approach
+
+No CMS needed. Use a **flat-file pattern** — each post is its own HTML file.
+
+### File structure
+```
+blog/
+├── index.html                        # Post listing page (manually updated)
+├── post-template.html                # Duplicate this for each new post
+├── the-lead-gap.html                 # Individual posts (filename = URL slug)
+└── sales-marketing-alignment.html
+```
+
+### Adding a new post
+1. Duplicate `blog/post-template.html`
+2. Rename it — the filename becomes the URL (e.g. `understanding-biotech-pipeline.html`)
+3. Fill in the title, date, and body copy
+4. Add a card/link to `blog/index.html` manually
+
+### When to reconsider this approach
+Past ~20–30 posts, or if the post template needs frequent layout changes across all posts,
+switch to **Eleventy** (lightest static site generator, no framework required, fits this stack).
+For the current publishing cadence this flat-file approach is the right call — no build step,
+no dependencies, no CMS overhead.
 
 ## Deployment Instructions
 
@@ -131,7 +169,7 @@ Vercel auto-deploys on every push to the main branch.
 
 ## Common Tasks
 
-**Change copy on a page:** Edit the relevant HTML file directly. Keep the voice warm and consultative per the brand guide.
+**Change copy on a page:** Edit the relevant HTML file directly. Read `docs/aurora-dynamics-voice.md` and `docs/aurora-dynamics-business-context.md` first — voice and strategic alignment matter as much as the words themselves.
 
 **Add a new service:** Follow the pattern in services.html — alternating `two-col` and `two-col--reverse` layouts with alternating white/light-grey backgrounds.
 
