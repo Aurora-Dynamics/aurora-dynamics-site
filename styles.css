@@ -90,6 +90,8 @@ body::before {
 
 @media (max-width: 768px) {
   .nav__toggle { display: block; }
+  .nav__logo img { height: 72px; }
+  .nav.scrolled .nav__logo img { height: 56px; }
   .nav__links { position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh; background: var(--warm-white); flex-direction: column; justify-content: center; gap: 2.5rem; padding: 2rem; box-shadow: -4px 0 24px rgba(42,49,50,0.1); transition: right 0.4s var(--ease-out); }
   .nav__links.open { right: 0; }
   .nav__links a { font-size: 1.2rem; }
